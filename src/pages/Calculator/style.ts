@@ -6,13 +6,13 @@ const CalculatorWrapper = styled.div`
   flex-direction: column;
   height: 100%;
   opacity: 0.8;
-  padding: 1.25em;
+  padding: 1.25rem;
   width: 100%;
 
   @media (min-width: 600px) {
     border-radius: 30px;
     height: 95%;
-    width: 26.75em;
+    width: 26.75rem;
   }
 `;
 
@@ -24,40 +24,17 @@ const ViewContainer = styled.div`
 const CommandsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 29.8em;
+  justify-content: center;
+  height: 29.8rem;
+  row-gap: 14px;
+  max-width: 24.31rem;
 
   & > div {
     display: flex;
-    justify-content: space-between;
-  }
-
-  & > div:nth-child(1) {
-    height: 5.1em;
-    margin-bottom: 1em;
-    width: 100%;
-  }
-  
-  & > div:nth-child(2) {
-    height: 5.1em;
-    margin-bottom: 1em;
-    width: 100%;
-  }
-  
-  & > div:nth-child(3) {
-    height: 5.1em;
-    margin-bottom: 1em;
-    width: 100%;
-  }
-  
-  & > div:nth-child(4) {
-    height: 5.1em;
-    margin-bottom: 1em;
-    width: 100%;
+    column-gap: 19px;
   }
 
   & > div:nth-child(5) {
-    height: 5.1em;
-    width: 100%;
 
     & > button:nth-child(2) {
       order: 2;
