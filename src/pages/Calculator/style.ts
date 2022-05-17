@@ -17,8 +17,12 @@ const CalculatorWrapper = styled.div`
 `;
 
 const ViewContainer = styled.div`
-  background-color: red;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  justify-content: end;
+  padding-bottom: 6.62rem;
 `;
 
 const CommandsContainer = styled.div`

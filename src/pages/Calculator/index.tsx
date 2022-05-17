@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import commandsList from '../../helpers/command';
 import { ICommandType } from '../../models/Commands';
-import Box from './componets/Box';
+import Box from './components/Box';
 import { CalculatorWrapper, CommandsContainer, ViewContainer } from './style';
 
 const Calculator = () => {
