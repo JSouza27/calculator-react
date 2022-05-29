@@ -9,4 +9,25 @@ const AppWrapper = styled.div`
   width: 100vw;
 `;
 
-export default AppWrapper;
+const AppContainer = styled.div`
+  align-items: center;
+  background-color: var(--color-soft-white);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  opacity: 0.8;
+  width: 100vw;
+
+  @media (min-width: 600px) {
+    border-radius: 1.87rem;
+    height: 41.68rem;
+    max-height: 57.8rem;
+    width: 23.43rem;
+    max-width: 26.75rem ;
+  }
+`;
+
+export {
+  AppWrapper,
+  AppContainer,
+};
