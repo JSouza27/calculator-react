@@ -3,7 +3,7 @@ import { IButton } from '../../interfaces/Interfaces';
 import CustomButton from './style';
 
 const Button = ({ type, label }: IButton) => (
-  <CustomButton name={type}>
+  <CustomButton name={type} theme={{ label }}>
     {label}
   </CustomButton>
 );

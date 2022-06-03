@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import commandsList from '../../helpers/command';
 import { ICommand } from '../../interfaces/Interfaces';
 import Button from '../Button';
+import { KeyboardContainer, KeyboardWrapper } from './style';
 
 const Keyboard = () => {
   const [buttonsRow1, setButtonsRow1] = useState<ICommand[] | []>([]);
@@ -23,33 +24,33 @@ const Keyboard = () => {
   }, []);
 
   return (
-    <div>
-      <div>
+    <KeyboardWrapper>
+      <KeyboardContainer>
         {buttonsRow1.map(({ type, label, components }) => (
           <Button type={type} label={label || components} />
         ))}
-      </div>
-      <div>
+      </KeyboardContainer>
+      <KeyboardContainer>
         {buttonsRow2.map(({ type, label, components }) => (
           <Button type={type} label={label || components} />
         ))}
-      </div>
-      <div>
+      </KeyboardContainer>
+      <KeyboardContainer>
         {buttonsRow3.map(({ type, label, components }) => (
           <Button type={type} label={label || components} />
         ))}
-      </div>
-      <div>
+      </KeyboardContainer>
+      <KeyboardContainer>
         {buttonsRow4.map(({ type, label, components }) => (
           <Button type={type} label={label || components} />
         ))}
-      </div>
-      <div>
+      </KeyboardContainer>
+      <KeyboardContainer>
         {buttonsRow5.map(({ type, label, components }) => (
           <Button type={type} label={label || components} />
         ))}
-      </div>
-    </div>
+      </KeyboardContainer>
+    </KeyboardWrapper>
   );
 };
 

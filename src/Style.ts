@@ -7,6 +7,10 @@ const AppWrapper = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  
+  @media (min-width: 600px) {
+    padding: 1rem;
+  }
 `;
 
 const AppContainer = styled.div`
@@ -20,9 +24,9 @@ const AppContainer = styled.div`
 
   @media (min-width: 600px) {
     border-radius: 1.87rem;
-    height: 41.68rem;
+    height: 100%;
     max-height: 57.8rem;
-    width: 23.43rem;
+    width: 100%;
     max-width: 26.75rem ;
   }
 `;
