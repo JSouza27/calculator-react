@@ -1,10 +1,11 @@
 import React from 'react';
+import Count from './components/Count/Count';
+import { DisplayWrapper } from './style';
 
-// eslint-disable-next-line arrow-body-style
-const Display = () => {
-  return (
-    <div>Display</div>
-  );
-};
+const Display = () => (
+  <DisplayWrapper>
+    <Count />
+  </DisplayWrapper>
+);
 
 export default Display;

@@ -6,7 +6,7 @@ const CustomButton = styled.button`
   border-radius: 10px;
   box-shadow: ${(props) => (props.name === 'number' ? '-4px 4px 4px rgba(0, 0, 0, 0.05)' : 'none')};
   color: ${(props) => (props.name === 'number' ? 'var(--color-grey)' : 'var(--color-white)')};
-  flex-basis: ${(props) => (props.theme.label === '=' ? '11.56rem' : '1')};;
+  flex-basis: ${(props) => (props.theme.label === '=' ? '11.56rem' : 'auto')};;
   font-weight: var(--font-weight-600);
   font-size: ${(props) => (props.name === 'number' ? '1.875rem' : '2.25rem')};
   height: 5.062rem;
