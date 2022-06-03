@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import commandsList from '../../helpers/command';
+import commandsList from '../../helpers/Command';
 import { ICommand } from '../../interfaces/Interfaces';
 import Button from '../Button';
 import { KeyboardContainer, KeyboardWrapper } from './style';
