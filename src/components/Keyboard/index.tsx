@@ -1,57 +1,43 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import commandsList from '../../helpers/Command';
-import { ICommand } from '../../interfaces/Interfaces';
+import React from 'react';
+import { AiOutlinePercentage } from 'react-icons/ai';
+import { FiDelete } from 'react-icons/fi';
+import { GoPrimitiveDot } from 'react-icons/go';
+import { RiParenthesesFill } from 'react-icons/ri';
 import Button from '../Button';
 import { KeyboardContainer, KeyboardWrapper } from './style';
 
-const Keyboard = () => {
-  const [buttonsRow1, setButtonsRow1] = useState<ICommand[] | []>([]);
-  const [buttonsRow2, setButtonsRow2] = useState<ICommand[] | []>([]);
-  const [buttonsRow3, setButtonsRow3] = useState<ICommand[] | []>([]);
-  const [buttonsRow4, setButtonsRow4] = useState<ICommand[] | []>([]);
-  const [buttonsRow5, setButtonsRow5] = useState<ICommand[] | []>([]);
-
-  const getCommands = useCallback(() => {
-    setButtonsRow1(commandsList.filter((command) => command.row === 1));
-    setButtonsRow2(commandsList.filter((command) => command.row === 2));
-    setButtonsRow3(commandsList.filter((command) => command.row === 3));
-    setButtonsRow4(commandsList.filter((command) => command.row === 4));
-    setButtonsRow5(commandsList.filter((command) => command.row === 5));
-  }, []);
-
-  useEffect(() => {
-    getCommands();
-  }, []);
-
-  return (
-    <KeyboardWrapper>
-      <KeyboardContainer>
-        {buttonsRow1.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
-      </KeyboardContainer>
-      <KeyboardContainer>
-        {buttonsRow2.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
-      </KeyboardContainer>
-      <KeyboardContainer>
-        {buttonsRow3.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
-      </KeyboardContainer>
-      <KeyboardContainer>
-        {buttonsRow4.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
-      </KeyboardContainer>
-      <KeyboardContainer>
-        {buttonsRow5.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
-      </KeyboardContainer>
-    </KeyboardWrapper>
-  );
-};
+const Keyboard = () => (
+  <KeyboardWrapper>
+    <KeyboardContainer>
+      <Button type="operator" label="AC" />
+      <Button type="operator" label={<RiParenthesesFill size="2.81rem" />} />
+      <Button type="operator" label={<AiOutlinePercentage size="2.5rem" />} />
+      <Button type="operator" label={<FiDelete size="2.5rem" />} />
+    </KeyboardContainer>
+    <KeyboardContainer>
+      <Button type="number" label="7" />
+      <Button type="number" label="8" />
+      <Button type="number" label="8" />
+      <Button type="operator" label="x" />
+    </KeyboardContainer>
+    <KeyboardContainer>
+      <Button type="number" label="4" />
+      <Button type="number" label="5" />
+      <Button type="number" label="6" />
+      <Button type="operator" label="-" />
+    </KeyboardContainer>
+    <KeyboardContainer>
+      <Button type="number" label="1" />
+      <Button type="number" label="2" />
+      <Button type="number" label="3" />
+      <Button type="operator" label="+" />
+    </KeyboardContainer>
+    <KeyboardContainer>
+      <Button type="number" label="0" />
+      <Button type="number" label={<GoPrimitiveDot size="1rem" />} />
+      <Button type="operator" label="=" />
+    </KeyboardContainer>
+  </KeyboardWrapper>
+);
 
 export default Keyboard;
