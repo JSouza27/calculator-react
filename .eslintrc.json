@@ -25,6 +25,7 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
         "arrow-body-style": ["error", "as-needed"],
-        "react/jsx-props-no-spreading": 0
+        "react/jsx-props-no-spreading": 0,
+        "no-useless-return": "off"
     }
 }

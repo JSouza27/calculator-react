@@ -10,5 +10,11 @@ const DisplayWrapper = styled.div`
   width: 100%;
 `;
 
-// eslint-disable-next-line import/prefer-default-export
-export { DisplayWrapper };
+const CountWrapper = styled.div`
+  color: var(--color-grey);
+  font-size: 2.062rem;
+  font-weight: var(--font-weight-600);
+  text-align: right;
+`;
+
+export { DisplayWrapper, CountWrapper };

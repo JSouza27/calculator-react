@@ -23,4 +23,9 @@ export interface ICalculatorContext {
   clearMemory: Function;
   setOperation: Function;
   addDigit: Function;
+  displayValue: string,
+  operations: string | null,
+  clearDisplay: boolean,
+  values: number[],
+  current: number,
 }
