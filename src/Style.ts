@@ -18,6 +18,7 @@ const AppContainer = styled.div`
   background-color: var(--color-soft-white);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
   opacity: 0.8;
   width: 100vw;

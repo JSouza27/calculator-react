@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface ICommand {
   label: string | null;
   type: string;
@@ -9,4 +11,16 @@ export interface ICommand {
 export interface IButton {
   type: string;
   label: any;
+  value?: string | number;
+  click: Function;
+}
+
+export interface IChildren {
+  children: ReactNode;
+}
+
+export interface ICalculatorContext {
+  clearMemory: Function;
+  setOperation: Function;
+  addDigit: Function;
 }
