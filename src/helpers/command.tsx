@@ -1,6 +1,8 @@
 import React from 'react';
 import { AiOutlinePercentage } from 'react-icons/ai';
 import { FiDelete } from 'react-icons/fi';
+import { RiParenthesesFill } from 'react-icons/ri';
+import { GoPrimitiveDot } from 'react-icons/go';
 import { ICommand } from '../interfaces/Interfaces';
 
 const commandsList: ICommand[] = [
@@ -82,11 +84,11 @@ const commandsList: ICommand[] = [
     components: null,
   },
   {
-    label: '( )',
+    label: null,
     type: 'operator',
     value: '+',
     row: 1,
-    components: null,
+    components: <RiParenthesesFill size="2.81rem" />,
   },
   {
     label: null,
@@ -131,11 +133,11 @@ const commandsList: ICommand[] = [
     components: null,
   },
   {
-    label: '.',
+    label: null,
     type: 'number',
     value: '.',
     row: 5,
-    components: null,
+    components: <GoPrimitiveDot size="1rem" />,
   },
 ];
 
