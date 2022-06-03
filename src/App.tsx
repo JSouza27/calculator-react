@@ -1,12 +1,16 @@
 import React from 'react';
-import GlobalStyle from './assets/css/GlobalStyle';
-import Calculator from './pages/Calculator';
-import AppWrapper from './Style';
+import Display from './components/Display';
+import Keyboard from './components/Keyboard';
+import GlobalStyle from './css/GlobalStyle';
+import { AppWrapper, AppContainer } from './Style';
 
 const App = () => (
   <AppWrapper className="App">
+    <AppContainer>
+      <Display />
+      <Keyboard />
+    </AppContainer>
     <GlobalStyle />
-    <Calculator />
   </AppWrapper>
 );
 
