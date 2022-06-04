@@ -10,6 +10,7 @@ const KeyboardWrapper = styled.div`
 
 const KeyboardContainer = styled.div`
   display: flex;
+  justify-content: center;
   gap: 1.187rem;
 `;
 

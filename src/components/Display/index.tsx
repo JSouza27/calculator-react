@@ -1,11 +1,15 @@
-import React from 'react';
-import Count from './components/Count/Count';
-import { DisplayWrapper } from './style';
+import React, { useContext } from 'react';
+import { CalculatorContext } from '../../context/CalculatorContext';
+import { CountWrapper, DisplayWrapper } from './style';
 
-const Display = () => (
-  <DisplayWrapper>
-    <Count />
-  </DisplayWrapper>
-);
+const Display = () => {
+  const { displayValue } = useContext(CalculatorContext);
+
+  return (
+    <DisplayWrapper>
+      <CountWrapper>{displayValue}</CountWrapper>
+    </DisplayWrapper>
+  );
+};
 
 export default Display;

@@ -1,54 +1,72 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import commandsList from '../../helpers/Command';
-import { ICommand } from '../../interfaces/Interfaces';
+import React, { useContext } from 'react';
+import { TbDivide } from 'react-icons/tb';
+import { FiDelete } from 'react-icons/fi';
+import { GoPrimitiveDot } from 'react-icons/go';
+import { CgMathPercent } from 'react-icons/cg';
+import { CalculatorContext } from '../../context/CalculatorContext';
 import Button from '../Button';
 import { KeyboardContainer, KeyboardWrapper } from './style';
 
 const Keyboard = () => {
-  const [buttonsRow1, setButtonsRow1] = useState<ICommand[] | []>([]);
-  const [buttonsRow2, setButtonsRow2] = useState<ICommand[] | []>([]);
-  const [buttonsRow3, setButtonsRow3] = useState<ICommand[] | []>([]);
-  const [buttonsRow4, setButtonsRow4] = useState<ICommand[] | []>([]);
-  const [buttonsRow5, setButtonsRow5] = useState<ICommand[] | []>([]);
-
-  const getCommands = useCallback(() => {
-    setButtonsRow1(commandsList.filter((command) => command.row === 1));
-    setButtonsRow2(commandsList.filter((command) => command.row === 2));
-    setButtonsRow3(commandsList.filter((command) => command.row === 3));
-    setButtonsRow4(commandsList.filter((command) => command.row === 4));
-    setButtonsRow5(commandsList.filter((command) => command.row === 5));
-  }, []);
-
-  useEffect(() => {
-    getCommands();
-  }, []);
+  const { addDigit, clearMemory, setOperation } = useContext(CalculatorContext);
 
   return (
     <KeyboardWrapper>
       <KeyboardContainer>
-        {buttonsRow1.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
+        <Button
+          type="operator"
+          label="AC"
+          click={clearMemory}
+        />
+        <Button
+          type="operator"
+          label={<CgMathPercent size="2.81rem" />}
+          click={setOperation}
+          value="%"
+        />
+        <Button
+          type="operator"
+          label={<TbDivide size="2.5rem" />}
+          click={setOperation}
+          value="/"
+        />
+        <Button
+          type="operator"
+          label={<FiDelete size="2.5rem" />}
+          click={clearMemory}
+        />
       </KeyboardContainer>
+
       <KeyboardContainer>
-        {buttonsRow2.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
+        <Button type="number" label="7" click={addDigit} />
+        <Button type="number" label="8" click={addDigit} />
+        <Button type="number" label="9" click={addDigit} />
+        <Button type="operator" label="x" click={setOperation} value="x" />
       </KeyboardContainer>
+
       <KeyboardContainer>
-        {buttonsRow3.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
+        <Button type="number" label="4" click={addDigit} />
+        <Button type="number" label="5" click={addDigit} />
+        <Button type="number" label="6" click={addDigit} />
+        <Button type="operator" label="-" click={setOperation} value="-" />
       </KeyboardContainer>
+
       <KeyboardContainer>
-        {buttonsRow4.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
+        <Button type="number" label="1" click={addDigit} />
+        <Button type="number" label="2" click={addDigit} />
+        <Button type="number" label="3" click={addDigit} />
+        <Button type="operator" label="+" click={setOperation} value="+" />
       </KeyboardContainer>
+
       <KeyboardContainer>
-        {buttonsRow5.map(({ type, label, components }) => (
-          <Button type={type} label={label || components} />
-        ))}
+        <Button type="number" label="0" click={addDigit} />
+        <Button
+          type="number"
+          label={<GoPrimitiveDot size="1rem" />}
+          click={addDigit}
+          value="."
+        />
+        <Button type="operator" label="=" click={setOperation} value="=" />
       </KeyboardContainer>
     </KeyboardWrapper>
   );
