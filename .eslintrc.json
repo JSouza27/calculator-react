@@ -26,6 +26,7 @@
         "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
         "arrow-body-style": ["error", "as-needed"],
         "react/jsx-props-no-spreading": 0,
-        "no-useless-return": "off"
+        "no-useless-return": "off",
+        "@typescript-eslint/lines-between-class-members": ["off"]
     }
 }

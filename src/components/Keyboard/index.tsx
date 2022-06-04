@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AiOutlinePercentage } from 'react-icons/ai';
+import { TbDivide } from 'react-icons/tb';
 import { FiDelete } from 'react-icons/fi';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { RiParenthesesFill } from 'react-icons/ri';
@@ -26,7 +26,7 @@ const Keyboard = () => {
         />
         <Button
           type="operator"
-          label={<AiOutlinePercentage size="2.5rem" />}
+          label={<TbDivide size="2.5rem" />}
           click={setOperation}
           value="/"
         />
@@ -41,7 +41,7 @@ const Keyboard = () => {
         <Button type="number" label="7" click={addDigit} />
         <Button type="number" label="8" click={addDigit} />
         <Button type="number" label="9" click={addDigit} />
-        <Button type="operator" label="x" click={setOperation} value="*" />
+        <Button type="operator" label="x" click={setOperation} value="x" />
       </KeyboardContainer>
 
       <KeyboardContainer>

@@ -2,6 +2,7 @@ import React, {
   createContext, useMemo, useState,
 } from 'react';
 import { ICalculatorContext, IChildren } from '../interfaces/Interfaces';
+import ArithmeticOperations from '../utils/ArithmeticOperations';
 
 const InitialValue = {
   clearMemory: () => {},
@@ -37,9 +38,22 @@ export const CalculatorProvider = ({ children }: IChildren) => {
     if (current === 0) {
       setOperations(operation);
       setCurrent(1);
-      setDisplayValue(displayValue + operation);
-      // setInternalValue('0');
+      setDisplayValue(`${displayValue} ${operation} `);
       setClearDisplay(false);
+    } else {
+      const isEquals = operation === '=';
+      const currentOperation = operations || '';
+      const newValues = [...values];
+      const calculation = new ArithmeticOperations(currentOperation, values);
+
+      newValues[0] = calculation.performOperation();
+      newValues[1] = 0;
+
+      setDisplayValue(newValues[0].toString());
+      setInternalValue([newValues[0].toString(), newValues[1].toString()]);
+      setOperations(isEquals ? null : operation);
+      setCurrent(isEquals ? 0 : 1);
+      setValues(newValues);
     }
   };
 
