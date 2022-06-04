@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { TbDivide } from 'react-icons/tb';
 import { FiDelete } from 'react-icons/fi';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { RiParenthesesFill } from 'react-icons/ri';
+import { CgMathPercent } from 'react-icons/cg';
 import { CalculatorContext } from '../../context/CalculatorContext';
 import Button from '../Button';
 import { KeyboardContainer, KeyboardWrapper } from './style';
@@ -20,9 +20,9 @@ const Keyboard = () => {
         />
         <Button
           type="operator"
-          label={<RiParenthesesFill size="2.81rem" />}
+          label={<CgMathPercent size="2.81rem" />}
           click={setOperation}
-          value="()"
+          value="%"
         />
         <Button
           type="operator"

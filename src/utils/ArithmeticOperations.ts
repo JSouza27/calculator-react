@@ -32,11 +32,18 @@ export default class ArithmeticOperations {
     return this.result;
   }
 
+  private percentage(): number {
+    this.result = this.list[0] / 100;
+
+    return this.result;
+  }
+
   public performOperation(): number {
     if (this.opration === '+') return this.sum();
     if (this.opration === '-') return this.subtraction();
     if (this.opration === 'x') return this.multiplication();
     if (this.opration === '/') return this.division();
+    if (this.opration === '%') return this.percentage();
 
     return this.result;
   }
