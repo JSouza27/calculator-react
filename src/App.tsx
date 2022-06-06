@@ -2,11 +2,12 @@ import React from 'react';
 import Display from './components/Display';
 import Keyboard from './components/Keyboard';
 import { CalculatorProvider } from './context/CalculatorContext';
-import GlobalStyle from './css/GlobalStyle';
+import Img from './assets/img/background.png';
+import GlobalStyle from './assets/css/GlobalStyle';
 import { AppWrapper, AppContainer } from './Style';
 
 const App = () => (
-  <AppWrapper className="App">
+  <AppWrapper theme={{ background: Img }} className="App">
     <CalculatorProvider>
       <AppContainer>
         <Display />

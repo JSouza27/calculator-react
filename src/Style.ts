@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const AppWrapper = styled.div`
   align-items: center;
   background-color: var(--color-light-yellow);
+  background-image: url(${(props) => props.theme.background});
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   height: 100vh;
