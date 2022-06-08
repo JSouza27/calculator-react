@@ -29,3 +29,8 @@ export interface ICalculatorContext {
   values: number[],
   current: number,
 }
+
+export interface IToggle {
+  click: Function;
+  toggle: string;
+}

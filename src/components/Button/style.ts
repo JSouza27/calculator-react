@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const CustomButton = styled.button`
   align-items: center;
-  background-color: ${(props) => (props.name === 'operator' ? 'var(--color-yellow)' : 'var(--color-white)')};;
+  background-color: ${(props) => (props.name === 'operator' ? 'var(--color-yellow)' : 'var(--color-white)')};
   border: none;
   border-radius: 10px;
   box-shadow: ${(props) => (props.name === 'number' ? '-4px 4px 4px rgba(0, 0, 0, 0.05)' : 'none')};
