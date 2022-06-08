@@ -7,6 +7,32 @@ const AppWrapper = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  
+  @media (min-width: 600px) {
+    padding: 1rem;
+  }
 `;
 
-export default AppWrapper;
+const AppContainer = styled.div`
+  align-items: center;
+  background-color: var(--color-soft-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  opacity: 0.8;
+  width: 100vw;
+
+  @media (min-width: 600px) {
+    border-radius: 1.87rem;
+    height: 100%;
+    max-height: 57.8rem;
+    width: 100%;
+    max-width: 26.75rem ;
+  }
+`;
+
+export {
+  AppWrapper,
+  AppContainer,
+};
