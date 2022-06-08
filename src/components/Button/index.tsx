@@ -10,7 +10,9 @@ const Button = ({
     theme={{ label }}
     onClick={() => click(value || label)}
   >
-    {label}
+    <span>
+      {label}
+    </span>
   </CustomButton>
 );
 

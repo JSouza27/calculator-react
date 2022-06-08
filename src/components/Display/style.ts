@@ -11,10 +11,11 @@ const DisplayWrapper = styled.div`
 `;
 
 const CountWrapper = styled.div`
-  color: var(--color-grey);
+  color: ${({ theme }) => theme.text};
   font-size: 2.062rem;
   font-weight: var(--font-weight-600);
   text-align: right;
+  transition: color 0.3s ease;
 `;
 
 export { DisplayWrapper, CountWrapper };
